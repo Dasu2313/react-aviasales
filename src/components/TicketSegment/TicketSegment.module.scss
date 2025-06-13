@@ -1,0 +1,37 @@
+.ticketSegmentContainer {
+  display: flex; 
+  
+  
+  gap: 20px; 
+  margin-bottom: 10px; 
+
+  &:last-child {
+    margin-bottom: 0; 
+  }
+}
+
+.segmentInfo {
+  display: flex;
+  flex-direction: column; 
+  
+  
+
+  .segmentLabel {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.5em; 
+    letter-spacing: 0.041666666666666664em; 
+    text-transform: uppercase;
+    color: #a0b0b9; 
+    margin-bottom: 2px; 
+  }
+
+  .segmentValue {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5em; 
+    color: #4a4a4a; 
+  }
+}

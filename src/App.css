@@ -1,0 +1,87 @@
+.App {
+  background-color: #f3f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.App .aviasalesLogoContainer {
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar {
+  flex-basis: 232px; 
+  flex-shrink: 0; 
+}
+
+.content {
+  flex-grow: 1; 
+  max-width: 502px; 
+  
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .sidebar,
+  .content {
+    width: 100%; 
+    max-width: 100%;
+    margin-bottom: 20px; 
+  }
+
+  .sidebar {
+    flex-basis: auto; 
+  }
+}

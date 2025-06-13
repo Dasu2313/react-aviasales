@@ -1,0 +1,28 @@
+.tabButton {
+  flex-grow: 1; 
+  height: 50px;
+  padding: 0;
+  border: 1px solid #dfe5ec; 
+  border-right: none; 
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.667em; 
+  letter-spacing: 0.041666666666666664em; 
+  text-transform: uppercase;
+  color: #4a4a4a; 
+  cursor: pointer;
+  outline: none; 
+
+  &:last-child {
+    border-right: 1px solid #dfe5ec; 
+  }
+
+  &.active {
+    background-color: #2196f3; 
+    color: #ffffff; 
+    border-color: #2196f3; 
+    z-index: 1; 
+  }
+}

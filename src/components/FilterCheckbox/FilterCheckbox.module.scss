@@ -1,0 +1,41 @@
+.hiddenCheckbox {
+  display: none;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px; 
+}
+
+.checkboxForm {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #9abbce; 
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; 
+
+  &.checked {
+    border-color: #2196f3; 
+  }
+}
+
+.checkmark {
+  width: 12px; 
+  height: 8px; 
+  background-color: #ffffff; 
+  
+  
+}
+
+.labelText {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.538em; 
+  color: #4a4a4a;
+}

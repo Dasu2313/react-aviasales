@@ -1,0 +1,31 @@
+.ticketContainer {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px; 
+}
+
+.ticketHeader {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.ticketPrice {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1em;
+  color: #2196f3;
+}
+
+.carrierLogo {
+  width: 110px; 
+  height: 36px; 
+}
+
+.ticketSegments {
+  
+}
