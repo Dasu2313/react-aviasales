@@ -41,7 +41,7 @@ function TicketList() {
   }
 
   
-  if (filteredAndSortedTickets.length === 0 && !loading && isAnyFilterSelected) {
+  if (filteredAndSortedTickets.length === 0 && !loading) {
     return (
       <div className={styles.noFlightsMessage}>
         Рейсов, подходящих под заданные фильтры, не найдено

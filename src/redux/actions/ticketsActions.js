@@ -39,7 +39,10 @@ export const fetchTickets = () => {
 
         const data = await ticketsResponse.json()
 
+        // updateTickets(data.tickets)
         tickets = [...tickets, ...data.tickets]
+        dispatch(fetchTicketsSuccess(tickets))
+
 
         if (data.stop) {
           stopFetching = true
