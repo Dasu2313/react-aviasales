@@ -54,5 +54,7 @@ const filtersSlice = createSlice({
   }
 });
 
-export const { toggleFilter, setAllFilters } = filtersSlice.actions;
+export const { toggleFilter, setAllFilters, getFilterValue } = filtersSlice.actions;
 export default filtersSlice.reducer;
+
+export const selectFilter = (filterName) => (state) => state.filter.filters[filterName];

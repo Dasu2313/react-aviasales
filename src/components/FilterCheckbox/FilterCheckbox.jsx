@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './FilterCheckbox.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleFilter } from '../../redux/actions/filterActions'
+import { selectFilter, toggleFilter } from '../../redux/actions/filterActions'
 
 function FilterCheckbox({ filterName, label }) {
   const dispatch = useDispatch()
-  const isChecked = useSelector((state) => state.filter.filters[filterName])
+  const isChecked = useSelector(selectFilter)
 
   const handleToggle = () => {
     dispatch(toggleFilter(filterName))
