@@ -1,14 +1,58 @@
+import { createSlice } from "@reduxjs/toolkit"
 
-export const TOGGLE_FILTER = 'TOGGLE_FILTER'
-export const SET_ALL_FILTERS = 'SET_ALL_FILTERS'
+const filtersSlice = createSlice({
+  name: 'filters',
+  initialState: {
+    filters: {
+      all: true,
+      noStops: true,
+      oneStop: true,
+      twoStops: true,
+      threeStops: false
+    }
+  },
+  reducers: {
+    toggleFilter: (state, action) => {
+      const newFilters = { ...state.filters }
+      const filterName = action.payload
 
+      if (filterName === 'all') {
+        const isChecked = !state.filters.all
+        newFilters.all = isChecked
+        newFilters.noStops = isChecked
+        newFilters.oneStop = isChecked
+        newFilters.twoStops = isChecked
+        newFilters.threeStops = isChecked
+      } else {
+        newFilters[filterName] = !newFilters[filterName]
 
-export const toggleFilter = (filterName) => ({
-  type: TOGGLE_FILTER,
-  payload: filterName,
-})
+        
+        const allOtherFiltersChecked =
+          newFilters.noStops && newFilters.oneStop && newFilters.twoStops && newFilters.threeStops
+        if (newFilters.all && !newFilters[filterName]) {
+          newFilters.all = false
+        } else if (!newFilters.all && allOtherFiltersChecked) {
+          newFilters.all = true
+        }
+      }
 
-export const setAllFilters = (isChecked) => ({
-  type: SET_ALL_FILTERS,
-  payload: isChecked,
-})
+      return { ...state, filters: newFilters }
+    },
+    setAllFilters: (state, action) => {
+      const setAllChecked = action.payload
+      return {
+        ...state,
+        filters: {
+          all: setAllChecked,
+          noStops: setAllChecked,
+          oneStop: setAllChecked,
+          twoStops: setAllChecked,
+          threeStops: setAllChecked,
+        },
+      }
+    }
+  }
+});
+
+export const { toggleFilter, setAllFilters } = filtersSlice.actions;
+export default filtersSlice.reducer;

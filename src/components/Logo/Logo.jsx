@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './Logo.module.scss'
-import AviasalesLogo from './AviasalesLogo'
+import AviasalesLogoSrc from '../../assets/icons/aviasales_logo.svg'
 
 function Logo() {
   return (
     <div className={styles.logoContainer}>
-      <AviasalesLogo />
+      <div className={styles.aviasalesLogoContainer}>
+            <img src={AviasalesLogoSrc} alt="Aviasales Logo" />
+          </div>
     </div>
   )
 }
